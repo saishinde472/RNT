@@ -1,0 +1,35 @@
+CREATE DATABASE RNT;
+
+USE RNT;
+
+CREATE TABLE departments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    UNIQUE KEY unique_name (name)
+);
+
+INSERT INTO departments (name) VALUES ('HR'), ('Engineering'), ('Sales');  -- Example departments, add more as needed
+
+CREATE TABLE emp (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    phone VARCHAR(255),
+    department_id INT,
+    FOREIGN KEY (department_id) REFERENCES departments(id)
+);
+
+
+INSERT INTO emp (username, password, name, email, phone, department_id) VALUES
+('skumar', 'password123@', 'Suresh Kumar', 'skumar@example.com', '9876543210', 1),
+('gsharma', 'password123@', 'Geeta Sharma', 'gsharma@example.com', '8765432109', 1),
+('vpatil', 'password123@', 'Vinayak Patil', 'vpatil@example.com', '7654321098', 5),
+('anair', 'password123@', 'Amita Nair', 'anair@example.com', '6543210987', 5),
+('rdesai', 'password123@', 'Rahul Desai', 'rdesai@example.com', '5432109876', 4),
+('nmehta', 'password123@', 'Neha Mehta', 'nmehta@example.com', '4321098765', 4),
+('skhan', 'password123@', 'Salman Khan', 'skhan@example.com', '3210987654', 4),
+('mpatel', 'password123@', 'Maya Patel', 'mpatel@example.com', '2109876543', 6),
+('vthakur', 'password123@', 'Vivek Thakur', 'vthakur@example.com', '1098765432', 1),
+('sshah', 'password123@', 'Sunita Shah', 'sshah@example.com', '0987654321', 6);

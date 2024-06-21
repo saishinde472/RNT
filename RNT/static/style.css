@@ -1,0 +1,44 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .gradient-custom {
+        /* fallback for old browsers */
+        background: #6db7cf;
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: rgb(255, 255, 255);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: lrgb(255, 255, 255);
+    }
+    
+    .card-registration .select-arrow {
+        top: 13px;
+    }
+    
+    .card {
+        border-radius: 15px;
+    }
+    
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #f093fb;
+    }
+    
+    .btn-primary {
+        background: linear-gradient(to right, #7ccdea, #32ceed);
+        border: none;
+    }
+    
+    .btn-primary:hover {
+        background: linear-gradient(to right, #32ceed, #7ccdea);
+    }
+    
+    .btn-danger {
+        background: linear-gradient(to right, #e13c3c, #e13c3c);
+        border: none;
+    }
+    
+    .navbar {
+        box-shadow: 0 4px 8px rgba(8, 8, 8, 0.516);
+    }
