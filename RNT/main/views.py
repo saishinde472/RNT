@@ -169,7 +169,7 @@ def search_employees(request):
         FROM emp
         JOIN departments dep ON emp.department_id = dep.id
         WHERE (%s = '' OR emp.name LIKE %s)
-          AND (%s = '' OR emp.department_id = %s)
+          AND (%s = '' OR emp.department_id = %s) order by id
     """
     params = [search_name, '%' + search_name + '%', department_id, department_id]
 
